@@ -1703,7 +1703,7 @@ guarantees.
 
 This command can't be called directly.
 
-## rm [GET /files/rm{?arg}{&recursive,flush}]
+## rm [POST /files/rm{?arg}{&recursive,flush}]
 Remove a file.
 
 ### Bugs
@@ -1719,12 +1719,12 @@ Remove a file.
 
     #### curl
 
-        curl -i "http://localhost:5001/api/v0/files/rm"
+        curl -i -X POST "http://localhost:5001/api/v0/files/rm"
 
     + Body
 
         ```
-        curl -i "http://localhost:5001/api/v0/files/rm"
+        curl -i -X POST "http://localhost:5001/api/v0/files/rm"
         ```
 
 + Response 400
@@ -1749,12 +1749,12 @@ Remove a file.
 
     #### curl
 
-        curl -i "http://localhost:5001/api/v0/files/rm?arg="
+        curl -i -X POST "http://localhost:5001/api/v0/files/rm?arg="
 
     + Body
 
         ```
-        curl -i "http://localhost:5001/api/v0/files/rm?arg="
+        curl -i -X POST "http://localhost:5001/api/v0/files/rm?arg="
         ```
 
 + Response 500
@@ -1789,12 +1789,12 @@ Remove a file.
 
     #### curl
 
-        curl -i "http://localhost:5001/api/v0/files/rm?arg=kitten"
+        curl -i -X POST "http://localhost:5001/api/v0/files/rm?arg=kitten"
 
     + Body
 
         ```
-        curl -i "http://localhost:5001/api/v0/files/rm?arg=kitten"
+        curl -i -X POST "http://localhost:5001/api/v0/files/rm?arg=kitten"
         ```
 
 + Response 500
@@ -1831,12 +1831,12 @@ Remove a file.
 
     #### curl
 
-        curl -i "http://localhost:5001/api/v0/files/rm?arg=/test"
+        curl -i -X POST "http://localhost:5001/api/v0/files/rm?arg=/test"
 
     + Body
 
         ```
-        curl -i "http://localhost:5001/api/v0/files/rm?arg=/test"
+        curl -i -X POST "http://localhost:5001/api/v0/files/rm?arg=/test"
         ```
 
 + Response 200
@@ -1867,12 +1867,12 @@ Remove a file.
 
     #### curl
 
-        curl -i "http://localhost:5001/api/v0/files/rm?arg=/test&recursive=true"
+        curl -i -X POST "http://localhost:5001/api/v0/files/rm?arg=/test&recursive=true"
 
     + Body
 
         ```
-        curl -i "http://localhost:5001/api/v0/files/rm?arg=/test&recursive=true"
+        curl -i -X POST "http://localhost:5001/api/v0/files/rm?arg=/test&recursive=true"
         ```
 
 + Response 200
